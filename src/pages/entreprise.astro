@@ -9,6 +9,14 @@ import Button from '@components/Button.astro';
 import Link from '@components/Link.astro';
 import ChecklistItem from '@components/ChecklistItem.astro';
 
+// import collections
+import { getCollection } from "astro:content";
+
+//fetching collection pricing
+const pricing = await getCollection('pricing', ({ data }) => {
+  return data.category === "entreprise";
+});
+
 ---
 
 <Layout title="MCL | Offre entreprise" >
@@ -123,7 +131,7 @@ import ChecklistItem from '@components/ChecklistItem.astro';
 		</section>
 
 		<!-- services -->
-		<section class="section bg-brand-500/20">	
+		<section class="section bg-brand-500/20">
 			<div class="container">
 				<div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-center pb-12 lg:pb-16">
 					<div class="groupTitle space-y-1">
@@ -286,6 +294,68 @@ import ChecklistItem from '@components/ChecklistItem.astro';
 			</div>			
 		</section>
 
+		<!-- pricing -->
+		<section id="pricing_" class="section pattern ">
+			<div class="container">
+				<div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-center pb-12 lg:pb-16">
+					<div class="groupTitle space-y-1">
+						<span class="tagline">Améliorer la qualité de vie au travail</span>
+						<h2 class="headline headline-h2">Notre gamme de prix</h2>
+					</div>
+					<div class="subheadline-wrapper w-full">
+						<p class="sub__headline text-fs-base">Tous les tarifs sont à partir de et toutes taxes comprises.</p>
+					</div>
+				</div>
+				<div class="grid-wrapper w-full grid justify-center mt-16">
+					<ul id="grid-pricing" class="w-full grid gap-6 lg:gap-8 mx-auto sm:grid-cols-2 xl:grid-cols-4">
+						{
+							pricing.map ((pricing)  =>
+								(
+								<li>
+									<article class="flex flex-col border-2 border-brand text-center text-[1rem] p-6 rounded-2xl shadow-2xl shadow-brand/20 lg:p-8">
+										{pricing.data.popular &&(
+										<p class="mb-3"><span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md text-xs uppercase font-semibold bg-brand/20">Populaire</span></p>
+										)} 
+										<h4 class="headline headline-4">{pricing.data.title}</h4>
+										<span class="mt-5 font-bold text-fs-3xl">
+											{pricing.data.price}
+											<span class="font-bold text-2xl -mr-2">€</span>
+										</span>
+										<p class="mt-2 text-[1rem]">{pricing.data.accroche}</p>
+
+										<div class="card-pricing__details w-full bg-brand/20 px-1 rounded-sm py-1">
+											<span class="text-neutral_gray">{pricing.data.description}</span>
+										</div>
+
+										<ul class="mt-6 space-y-2.5 text-sm">
+											<li class="flex space-x-2 items-start">
+												<Icon name="check-circle" class="w-4 h-4 text-brand bg-gray rounded-full flex-shrink-0" />
+												<span class="text-gray text-left leading-none">
+													{pricing.data.bienfait_1}
+												</span>
+											</li>
+											<li class="flex space-x-2 items-start">
+												<Icon name="check-circle" class="w-4 h-4 text-brand bg-gray rounded-full flex-shrink-0" />
+												<span class="text-gray text-left leading-none">
+													{pricing.data.bienfait_2}
+												</span>
+											</li>
+											<li class="flex space-x-2 items-start">
+												<Icon name="check-circle" class="w-4 h-4 text-brand bg-gray rounded-full flex-shrink-0" />
+												<span class="text-gray text-left leading-none">
+													{pricing.data.bienfait_3}
+												</span>
+											</li>
+										</ul>
+									</article>
+								</li>
+								)
+							)
+						}
+					</ul>
+					</div>
+			</div>
+		</section>
 
     </Main>
 
