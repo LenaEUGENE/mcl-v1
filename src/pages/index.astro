@@ -9,6 +9,7 @@ import Button from '@components/Button.astro';
 import Link from '@components/Link.astro';
 import ServiceCard from '@components/ServiceCard.astro';
 import FeatureCard from '@components/FeatureCard.astro';
+import MediaCard from '@components/MediaCard.astro';
 
 // import collections
 import { getCollection } from "astro:content";
@@ -17,6 +18,9 @@ import { getCollection } from "astro:content";
 const pricing = await getCollection('pricing', ({ data }) => {
   return data.category === "particulier";
 });
+
+//fetching collection media
+const videos = await getCollection('medias');
 
 ---
 <Layout title="Mon corps libéré | Accueil">
@@ -202,6 +206,33 @@ const pricing = await getCollection('pricing', ({ data }) => {
 					</ul>
 				</div>
 			</div>
+		</section>
+
+		<!-- Medias -->
+		<section class="section bg-gray-900">
+			<div class="container">
+				<div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-center pb-12 lg:pb-16">
+					<div class="groupTitle space-y-1">
+						<span class="tagline">Tv, radio, podcast</span>
+						<h2 class="headline headline-h2">MCL dans les médias</h2>
+					</div>
+					<div class="subheadline-wrapper w-full">
+						<p class="sub__headline text-fs-base">Jean-Phillipe, fondateur de MCL, est l'invité des médias martiniquais</p>
+					</div>
+				</div>
+				<div class="grid-wrapper w-full grid justify-center mt-14">
+					<ul id="grid-media" class="w-full grid gap-6 lg:gap-8 mx-auto sm:grid-cols-2 lg:grid-cols-3">
+						
+						{videos.map((video) => (
+							<MediaCard
+								title={video.data.title}
+								thumbnails={video.data.thumbnails}
+								description={video.data.description}
+							/>
+						) )}
+					</ul>
+				</div>
+			<div>
 		</section>
 
 		<!-- CTA -->
