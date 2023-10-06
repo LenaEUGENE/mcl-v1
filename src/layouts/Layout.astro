@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+
+//import components
+import Header from "@components/Header.astro";
 interface Props {
 	title?: string;
 	description?: string;
@@ -25,6 +28,11 @@ const {
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen flex flex-col bg-offwhite text-gray text-fs-base relative">
+		
+		<Header />
 		<slot />
+
+		<script src="../../node_modules/preline/dist/preline.js"></script>
+
 	</body>
 </html>
