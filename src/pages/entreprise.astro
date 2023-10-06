@@ -149,7 +149,7 @@ const pricing = await getCollection('pricing', ({ data }) => {
 						
 						<div class="flex md:justify-center">
 							<Image
-								class="rounded-2xl shadow shadow-brand"
+								class="rounded-2xl rounded-2xl overflow-hidden shadow-2xl shadow-brand/20dow-brand"
 								width={576}
 								height={576}
 								src="/images/entreprise/massage-uda_1.jpg"
@@ -235,7 +235,7 @@ const pricing = await getCollection('pricing', ({ data }) => {
 						</div>
 						<div class="flex md:justify-center order-1 md:order-2">
 							<Image
-								class="rounded-2xl aspect-square object-cover object-left-top shadow shadow-brand"
+								class="rounded-2xl aspect-square object-cover object-left-top rounded-2xl overflow-hidden shadow-2xl shadow-brand/20dow-brand"
 								width={576}
 								height={576}
 								src="/images/entreprise/sophrologie_1.webp"
@@ -247,7 +247,7 @@ const pricing = await getCollection('pricing', ({ data }) => {
 					<div class="md:grid md:grid-cols-2 md:items-center md:gap-12 lg:gap:16 ">
 						<div class="flex md:justify-center">
 							<Image
-								class="rounded-2xl aspect-square object-cover object-center shadow shadow-brand"
+								class="rounded-2xl aspect-square object-cover object-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20dow-brand"
 								width={576}
 								height={576}
 								src="/images/entreprise/luxson_3.jpg"
@@ -356,6 +356,177 @@ const pricing = await getCollection('pricing', ({ data }) => {
 					</div>
 			</div>
 		</section>
+
+		<!-- partners -->
+		<div class="section">
+			<div class="container">
+				<div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-center pb-12 lg:pb-16">
+					<div class="groupTitle space-y-1">
+						<span class="tagline">MCL présent sur vos évènements</span>
+						<h2 class="headline headline-h2">Ils nous font confiance</h2>
+					</div>
+					<div class="subheadline-wrapper w-full">
+						<p class="sub__headline text-fs-base">Rejoignez les entreprises qui agissent pour le bien-être de leurs collaborateurs</p>
+					</div>
+				</div>
+				<!-- Grid -->
+				<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+					<!-- Card -->
+					<article class="group flex flex-col h-full bg-offwhite rounded-2xl overflow-hidden shadow-2xl shadow-brand/20">
+						<div class="aspect-auto max-h-64 flex flex-col justify-center items-center rounded-t-xl">
+							<Image 
+								src="/images/entreprise/logo-ministere_de_la_justice.svg"
+								alt="Logo - Ministère de la justice"
+								width={328}
+								height={256}
+								class="w-full object-cover object-center"
+							/>
+						</div>
+						<div class="p-4 md:p-6">
+							<h3 class="headline headline-h3 mb-2">
+							 	Tribunal de Fort-de-France
+							</h3>
+							<p>
+								Le tribunal de Fort-de-France à fait appel à nous pour apporter un moment de relaxation à ses usagers.
+							</p>
+						</div>
+					</article>
+
+					<article class="group flex flex-col h-full bg-offwhite rounded-2xl overflow-hidden shadow-2xl shadow-brand/20">
+						<div class="aspect-auto max-h-64 flex flex-col justify-center items-center rounded-t-xl">
+							<Image 
+							src="/images/entreprise/logo-transmartinique_1.png"
+							alt="Logo - TransMartinique"
+							width={328}
+							height={256}
+							class="w-full object-cover object-center"
+							/>
+						</div>
+						<div class="p-4 md:p-6">
+							<h3 class="headline headline-h4 mb-3">
+							 Course Trail La TransMartinique
+							</h3>
+							<p>
+								Nous avons répondu présent, lorsque l'association Manikou nous à proposer d'apaiser les corps sur 2 étapes de cette course de 134km.
+							</p>
+						</div>
+					</article>
+
+					<article class="group flex flex-col h-full bg-offwhite rounded-2xl overflow-hidden shadow-2xl shadow-brand/20">
+						<div class="aspect-auto max-h-64 flex flex-col justify-center items-center rounded-t-xl">
+							<Image 
+							src="/images/entreprise/logo-fdf.png"
+							alt="Logo - TransMartinique"
+							width={328}
+							height={256}
+							class="w-full object-cover object-center"
+							/>
+						</div>
+						<div class="p-4 md:p-6">
+							<h3 class="headline headline-h4 mb-3">
+							 	Ville de Fort-de-France
+							</h3>
+							<p>
+								Le personnel des crèches de Fort-de-France s'est vu invité à une séance d'initiation à la sophrologie.
+								Un moyen de les remercier pour leur engagement auprès des tout petits.
+							</p>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- MCL offre entreprise en images -->
+		<section class="section">
+			<div class="container">
+				<div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-center pb-12 lg:pb-16">
+					<div class="groupTitle space-y-1">
+						<span class="tagline">MCL se rend dans vos locaux</span>
+						<h2 class="headline headline-h2">MCL en prestations entreprise</h2>
+					</div>
+					<div class="subheadline-wrapper w-full">
+						<p class="sub__headline text-fs-base">Un échantillon de nos services en images</p>
+					</div>
+				</div>
+
+				<!-- Masonry Cards -->
+				<div class="grid px-6 md:grid-cols-3 space-y-6 gap-6 lg:gap-8 pt-12 lg:pt-16">
+					<article class="transform scale-110 -rotate-6 max-h-[528px] rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white">
+						<div class="aspect-auto">
+							<Image 
+								src="/images/entreprise/sophrologie_5.jpg"
+								alt="description"
+								width={384}
+								height={384}
+								class="w-full object-cover object-center"
+							/>
+						</div>
+						<div class="text-sm md:text-base text-gray p-4 overflow-hidden">
+							Initiation à la sophrologie pour le personnel des crèches de la ville de Fort-de-France.
+						</div>
+					</article>
+
+					<article class="max-h-96 rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white">
+						<div class="aspect-auto">
+							<Image 
+								src="/images/entreprise/transmartinique_1.jpg"
+								alt="description"
+								width={384}
+								height={384}
+								class="w-full object-cover object-center"
+							/>
+						</div>
+						<div class="text-sm md:text-base text-gray p-4 overflow-hidden">
+							Initiation à la sophrologie pour le personnel des crèches de la ville de Fort-de-France.
+						</div>
+					</article>
+					<article class="transform scale-110 rotate-6 max-h-[528px] rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white">
+						<div class="aspect-auto">
+							<Image 
+								src="/images/entreprise/massage-uda_1.jpg"
+								alt="description"
+								width={384}
+								height={384}
+								class="w-full object-cover object-center"
+							/>
+						</div>
+						<div class="text-sm md:text-base text-gray p-4 overflow-hidden">
+							Initiation à la sophrologie pour le personnel des crèches de la ville de Fort-de-France.
+						</div>
+					</article>
+					<article class="max-h-96 rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white">
+						<div class="aspect-auto">
+							<Image 
+								src="/images/entreprise/luxson_3.jpg"
+								alt="description"
+								width={384}
+								height={384}
+								class="w-full object-cover object-center"
+							/>
+						</div>
+						<div class="text-sm md:text-base text-gray p-4 overflow-hidden">
+							Initiation à la sophrologie pour le personnel des crèches de la ville de Fort-de-France.
+						</div>
+					</article>
+					<article class="transform scale-110 -rotate-3 lg:rotate-3 rounded-2xl overflow-hidden shadow-2xl shadow-brand/20">
+						<div class="aspect-auto">
+							<Image 
+								src="/images/entreprise/tribunal.jpg"
+								alt="description"
+								width={384}
+								height={384}
+								class="w-full object-cover object-center"
+							/>
+						</div>
+						<div class="text-sm md:text-base text-gray bg-offwhite p-4 overflow-hidden">
+							Initiation à la sophrologie pour le personnel des crèches de la ville de Fort-de-France.
+						</div>
+					</article>
+				</div>
+
+			</div>
+	</section>
 
     </Main>
 
