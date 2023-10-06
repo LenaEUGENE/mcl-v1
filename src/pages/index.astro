@@ -7,6 +7,8 @@ import { Icon } from 'astro-icon';
 import Main from '../components/Main.astro';
 import Button from '@components/Button.astro';
 import Link from '@components/Link.astro';
+import ServiceCard from '@components/ServiceCard.astro';
+
 ---
 
 <Layout title="Mon corps libéré | Accueil">
@@ -51,6 +53,51 @@ import Link from '@components/Link.astro';
 							classes={"isFilled dark"}
 						/>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- services -->
+		<section class="section">
+			<div class="container">
+				<!-- Grid -->
+				<div class="grid lg:grid-cols-12 gap-6 lg:gap-8 lg:items-start">
+					<div class="lg:col-span-4">
+						<p class="tagline">Choissisez votre séance de Relaxation</p>
+						<h2 class="headline headline-h2">Prenez-soin de vous</h2>
+						<p class="mt-3 text-lg text-gray-900">Vous souhaitez renforcer santé physique et mentale? Notre mission est de vous accompagner dans cette démarche</p>
+					</div>
+			
+					<div class="grid items-start md:grid-cols-3 gap-6 lg:gap-8 lg:col-span-8 mt-10 lg:mt-0">
+						<ServiceCard
+								 image={{
+									 src:"/images/home/massage_2.jpg",
+									 alt: 'un pied se fait masser'
+								 }}
+								 title='Massage bien-être'
+								 description='Massage bien-être de détente.'
+								 btn='link'
+							 />
+							<ServiceCard
+								 image={{
+									 src:"/images/home/sophrologie_1.jpg",
+									 alt: 'Femme noire en mdéditation sophrologique'
+								 }}
+								 title='Sophrologie'
+								 description='Pour connecter corps et conscience.'
+								 btn='link'
+							/>
+							<ServiceCard
+								 image={{
+									 src:"/images/home/luxson_1.jpg",
+									 alt: 'Homme en pleine séance de Luxson'
+								 }}
+								 title='Luxson - Psio'
+								 description='Pour reposer ses méninges.'
+								 btn='link'
+							/>
+					</div>
+				<!-- End Grid -->
 				</div>
 			</div>
 		</section>
