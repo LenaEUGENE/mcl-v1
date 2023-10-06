@@ -1,7 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon';
+
+//import components
+import Main from '../components/Main.astro';
+import Button from '@components/Button.astro';
+import Link from '@components/Link.astro';
 ---
 
 <Layout title="Mon corps libéré | Accueil">
-	<h1 class="text-4xl font-bold text-green-300">Mon corps libéré</h1>
+	<Main>
+		<section id="home__hero" class="section mt-24 relative grid items-ends overflow-hidden h-[70vh]">
+			<div class="container">
+				<Image 
+					src="/images/home/massage_1.jpg"
+					alt="un dos nu est massé"
+					width={2048}
+					height={1024}
+					class="absolute top-0 left-0 object-cover object-center h-full -z-20 aspect-[3/2]"
+				/>
+				<div class="overlay absolute top-0 left-0 w-full object-cover object-center h-full -z-10 bg-dark/20 aspect-[3/2]">
+
+				</div>
+				<div class="left lg:w-1/2 xl:w-4/6 h-full text-offwhite">
+					<span class="tagline text-brand">La Relaxologie à domicile</span>
+					<h1 class="headline headline-h1 text-offwhite mb-8">Votre rendez-vous bien-être <br> en <span class="bg-dark">Martinique</span></h1>
+					<p class="text-fs-medium">MCL accompagne celles et ceux à la recherche d'une bulle de relaxation.</p>
+					<p class="text-fs-medium">Laissez le bien-être venir à vous.</p>
+				
+					<div class="hero-home__cta-wrapper mt-12 space-x-4">
+						<Button 
+							type='button'
+							href='tel:+'
+							role='link'
+							label='Je prends rendez-vous'
+							icon={{
+								name:"ph:phone-call",
+								side:"right"
+							}}
+							classes={"isFilled"}
+						/>
+						<Link 
+							href='/'
+							label="Voir l'offre entreprise"
+							icon={{
+								name:"ph:arrow-right",
+								side:"right"
+							}}
+							classes={"isFilled dark"}
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</Main>
 </Layout>
