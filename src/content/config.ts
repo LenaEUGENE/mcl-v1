@@ -28,7 +28,41 @@ const gallery = defineCollection({
   }),
 });
 
+const videoSchema = defineCollection({
+  schema: z.object({
+    mediaType: z.enum(["podcast", "video"]),
+    url: z.string(),
+    tags: z.array(z.string()).optional(),
+    title: z.string(),
+    description: z.string(),
+    thumbnails: z.object({
+      small: z.object({
+        url: z.string(),
+        width: z.number(),
+        height: z.number(),
+      }),
+      medium: z.object({
+        url: z.string(),
+        width: z.number(),
+        height: z.number(),
+      }),
+      standard: z.object({
+        url: z.string(),
+        width: z.number(),
+        height: z.number(),
+      }),
+      highres: z.object({
+        url: z.string(),
+        width: z.number(),
+        height: z.number(),
+      })
+    })
+   
+  }),
+});
+
+
 export const collections = {
-  pricing, gallery
+  pricing, gallery, medias: videoSchema,
 }
 // 3. Export a single `collections` object to register your collection(s) 
