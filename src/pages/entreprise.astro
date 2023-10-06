@@ -12,7 +12,77 @@ import Link from '@components/Link.astro';
 
 <Layout title="MCL | Offre entreprise" >
     <Main>
-        
+        <section class="overflow-hidden mt-36 pb-20">
+			<div class="container mx-auto">
+				<div class="grid md:grid-cols-2 xl:grid-cols-12 items-center gap-8 xl:gap-10 2xl:gap-12">
+					<div class="w-full px-4 xl:col-span-7">
+						<div class="-mx-3 flex items-center sm:-mx-4">
+							<div class="w-full px-3 sm:px-4 xl:w-1/2">
+								<div class="py-3 sm:py-4">
+									<Image 
+										src="/images/entreprise/team.jpg"
+										alt="un travail d'équipe"
+										width={576}
+										height={576}
+										class="w-full object-cover object-center rounded-2xl aspect-[4/5]"
+									/>
+								</div>
+								<div class="py-3 sm:py-4">
+									<Image 
+										src="/images/entreprise/massage-uda_1.jpg"
+										alt="massage assis"
+										width={576}
+										height={576}
+										class="w-full object-cover object-center rounded-2xl aspect-[4/5]"
+									/>
+								</div>
+							</div>
+							<div class="w-full px-3 sm:px-4 xl:w-1/2">
+								<div class="relative z-10 my-4">
+									<Image 
+										src="/images/entreprise/sophrologie_5.jpg"
+										alt="séance de sophrologie en groupe et en plein air"
+										width={576}
+										height={576}
+										class="w-full object-cover object-center rounded-2xl aspect-[4/5]"
+									/>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-full px-4 xl:col-start-8 xl:col-span-6">
+						<div class="mt-10 lg:mt-0">
+							<span class="tagline">
+								Le bien-être au travail
+							</span>
+							<h1 class="headline headline-h1">
+								MCL, l'offre relaxation pour le bien-être de vos collaborateurs
+							</h1>
+							<p class="mb-8">
+								Devenez une entreprise ou il fait bon travailler en faisant de MCL votre référent bien-être.
+							</p>
+							<p class="mb-12">
+								Face au défi que représente la QVT(qualité de vie au travail), les entreprises doivent savoir répondre aux besoins leurs salariés. À cet égard, la santé physique et mentale sont deux priorités à intégrer ! 
+							</p>
+							<div class="cta-wrapper">
+								<Button
+									type="button"
+									role="link"
+									label="Nous contacter"
+									href="tel:+"
+									icon={{
+										name:"ph:envelope",
+										side: "right"
+									}}
+									classes={"isFilled"}
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
     </Main>
 
 </Layout>
