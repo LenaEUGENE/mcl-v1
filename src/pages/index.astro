@@ -8,6 +8,7 @@ import Main from '../components/Main.astro';
 import Button from '@components/Button.astro';
 import Link from '@components/Link.astro';
 import ServiceCard from '@components/ServiceCard.astro';
+import FeatureCard from '@components/FeatureCard.astro';
 
 ---
 
@@ -101,6 +102,37 @@ import ServiceCard from '@components/ServiceCard.astro';
 				</div>
 			</div>
 		</section>
+
+		<!-- Features -->
+		<div class="section bg-dark">
+			<div class="container">
+				<div class="grid lg:grid-cols-3 items-center gap-6 lg:gap-8">
+					<!-- Card -->
+					<FeatureCard
+                    icon={{
+                        name:"graduation-cap",
+                    }}
+                    title='Personnel qualifié'
+                    description="Nos praticiens ont toutes les compétences techniques, pratiques et humaines pour mener à bien les missions qui leur sont confiées"
+                />
+                <FeatureCard
+                    icon={{
+                        name:"compass",
+                    }}
+                    title='À la carte'
+                    description="Choisissez parmi nos prestations. Celles-ci peuvent être combinées afin de vous accommoder. Objectif: vous satisfaire au mieux de nos compétences."
+                />
+                <FeatureCard
+                    icon={{
+                        name:"house-line",
+                    }}
+                    title='À domicile'
+                    description="Décidez de l'heure et du lieu de votre prestation. Nous nous déplaçons dans un rayon de 25km autour de Fort-de-France, avec le matériel nécessaire."
+                />
+				
+				</div>
+			</div>
+		</div>
 
 	</Main>
 </Layout>
