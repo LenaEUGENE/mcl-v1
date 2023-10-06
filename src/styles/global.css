@@ -151,7 +151,7 @@ select {
   }
 
   .headline{
-    @apply block font-semibold text-gray-900;
+    @apply block font-semibold text-dark;
   }
 
   .headline-h1{
@@ -170,7 +170,7 @@ select {
   }
 
   .tagline{
-    @apply text-fs-tiny uppercase font-medium text-gray-900;
+    @apply text-fs-tiny uppercase font-medium text-dark;
   }
 
   .checklist-item{
