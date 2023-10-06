@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon';
+
+//import components
+import Main from '../components/Main.astro';
+import Button from '@components/Button.astro';
+import Link from '@components/Link.astro';
+import ChecklistItem from '@components/ChecklistItem.astro';
+
+// import collections
+import { getCollection } from "astro:content";
+
+//fetching collection pricing
+const pricing = await getCollection('pricing', ({ data }) => {
+  return data.category === "entreprise";
+});
+
+---
+
+<Layout title="MCL | Offre entreprise" >
+    <Main>
+       
+      <!-- mission statement -->
+      <div class="section">
+        <div class="container">
+          <div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-center pb-12 lg:pb-16">
+            <div class="groupTitle space-y-1">
+              <span class="tagline">Ce qui nous caractérise</span>
+              <h2 class="headline headline-h2">Notre mission et nos valeurs</h2>
+            </div>
+            <div class="subheadline-wrapper w-full">
+              <p class="sub__headline text-fs-base">Nous sommes attachés à certains aspects</p>
+            </div>
+          </div>
+
+          <div class="space-y-16">
+            <div class="mt-5 w-full columns-2">
+              <p class="text-left">
+                  De nos jours, on peut avoir l'impression que le monde bouge plus vite que nous.
+                  Nous sommes constament sollicité et hyperstimulé. Parfois cette sollicitaion constante se traduit par un manque de movement, car s'est à notre cerveau auquel il est fait appel de plus en plus souvent.
+                  MCL souhaite apporter un moment de recul, de relachement, à tout un chacun avec son offre de relaxation, afin que ses clients soit reconnectés à leur corps et leur conscience le temps de la séance et un temps en plus.
+              </p>
+          </div>
+  
+            <div class="grid lg:grid-cols-3 items-center gap-6 lg:gap-8">
+              <!-- Card -->
+              <article class="group flex gap-y-6 w-full h-full bg-white rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 p-6">    
+                <div>
+                  <div class="">
+                    <h3 class="headline headline-4 mb-3">Le respect</h3>
+                    <p class="text-gray">Nous faisons en sorte que la personne massée se sente en confiance, écoutée et respectée.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="group flex gap-y-6 w-full h-full bg-white rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 p-6">    
+                <div>
+                  <div class="">
+                    <h3 class="headline headline-4 mb-3">Le partage</h3>
+                    <p class="text-gray">Nous appliquons le partage de connaissance, la diffusion de conseils pour que la personne massée puisse continuée, à prendre soin d'elle une fois la prestation terminée.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="group flex gap-y-6 w-full h-full bg-white rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 p-6">    
+                <div>
+                  <div class="">
+                    <h3 class="headline headline-4 mb-3">La formation continue</h3>
+                    <p class="text-gray">Nous continuons à nous former et à nous tenir au fait des derniers mouvements en matière de relaxologie.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </Main>
+
+</Layout>
