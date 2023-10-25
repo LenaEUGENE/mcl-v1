@@ -221,15 +221,49 @@ const videos = await getCollection('medias');
 					</div>
 				</div>
 				<div class="grid-wrapper w-full grid justify-center mt-14">
-					<ul id="grid-media" class="w-full grid gap-6 lg:gap-8 mx-auto sm:grid-cols-2 lg:grid-cols-3">
+					<ul id="grid-media" class="w-full grid gap-6 lg:gap-8 mx-auto lg:grid-cols-2">
 						
-						{videos.map((video) => (
-							<MediaCard
-								title={video.data.title}
-								thumbnails={video.data.thumbnails}
-								description={video.data.description}
-							/>
-						) )}
+						<article class=" media-card group grid h-full w-full justify-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white text-gray">
+							<div class="flex h-full w-full items-center justify-center">
+								 <iframe
+									 width="560"
+									 height="315"
+									 src="https://www.youtube.com/embed/-jxEu0GicYs?si=rf0TXXf8TVGNC9wx"
+									 title="YouTube video player"
+									 frameborder="0"
+									 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									 allowfullscreen>
+								 </iframe>
+							 </div>
+							 <div class="flex flex-col justify-between flex-1 p-6">
+								 <div class="flex-1">
+								   <h3 class="headline headline-4 mb-3">Qui es-tu Jean-Phillippe?</h3>
+								   <p class="">Entretien de Jean-Philippe, fondateur de Mon Corps Libéré, dans l'emission Quoi de 9 sur Zouk Tv.</p>
+								 </div>
+						   
+							   </div>
+						 </article>
+						 <article class=" media-card group grid h-full w-full justify-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white text-gray">
+							<div class="flex h-full w-full items-center justify-center">
+								 <iframe
+									 width="560"
+									 height="315"
+									 src="https://www.youtube.com/embed/eE69clJxUs4?si=U7VH2p-Uk3pKKK8E"
+									 title="YouTube video player"
+									 frameborder="0"
+									 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									 allowfullscreen>
+								 </iframe>
+							 </div>
+							 <div class="flex flex-col justify-between flex-1 p-6">
+								 <div class="flex-1">
+								   <h3 class="headline headline-4 mb-3">Itinéraire d'un praticien bien-être.</h3>
+								   <p class="">Entretien de Jean-Philippe, fondateur de Mon Corps Libéré, dans l'emission Un jour, une entreprise, sur Radio Caraïbes International.</p>
+								 </div>
+						   
+							   </div>
+						 </article>
+						 
 					</ul>
 				</div>
 			<div>

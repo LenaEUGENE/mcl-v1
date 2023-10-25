@@ -1,8 +1,8 @@
 ---
 mediaType: video
-title: "Qui es-tu Jean-Phillippe ?"
+title: "Qui es-tu Jean-Phillippe?"
 description: Entretien de Jean-Philippe, fondateur de Mon Corps Libéré, dans l'emission Quoi de 9 sur Zouk Tv.
-url:  https://youtu.be/U62QrEGJ--M?si=67veZYBYZ1HKSAzb
+url: https://youtu.be/U62QrEGJ--M?si=67veZYBYZ1HKSAzb
 thumbnails:
     small:
         url: /images/medias/videos/tv_1.png
