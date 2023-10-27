@@ -15,6 +15,7 @@ interface Props {
     subtitle?: string,
     description: string,
     btn?: "Button" | "link" 
+    href:string
     classes?: string;
 }
 
@@ -25,6 +26,7 @@ const {
     subtitle,
     description,
     btn,
+    href,
     classes,
     ...rest
 } = Astro.props as Props;
@@ -73,7 +75,7 @@ class:list={[
             <Link
                 role='link'
                 label="en savoir plus"
-                href= "/"
+                href= {href}
                 icon={{
                 name:'arrow-right',
                 side: 'right'
