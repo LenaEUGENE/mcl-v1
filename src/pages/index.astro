@@ -12,10 +12,11 @@ import FeatureCard from '@components/FeatureCard.astro';
 import MediaCard from '@components/MediaCard.astro';
 
 //import images
-import massage_1 from "@images/home/massage_1.jpg"
-import massage_2 from "@images/home/massage_2.jpg"
-import sophrologie_1 from "@images/home/sophrologie_1.jpg"
-import luxson_1 from "@images/home/luxson_1.jpg"
+import massage_1 from "@assets/home/massage_1.jpg"
+import massage_2 from "@assets/home/massage_2.jpg"
+import sophrologie_1 from "@assets/home/sophrologie_1.jpg"
+import podcast_1 from "@assets/home/podcast_1.webp"
+import luxson_1 from "@assets/home/luxson_1.jpg"
 
 
 // import collections
@@ -38,9 +39,7 @@ const videos = await getCollection('medias');
 				<Image 
 					src={massage_1}
 					alt="un dos nu est massé"
-					width={2048}
-					height={1024}
-					format='webp'
+					aspect-ratio="3:2"
 					class="absolute top-0 left-0 object-cover object-center h-full -z-20 aspect-[3/2]"
 				/>
 				<div class="overlay absolute top-0 left-0 w-full object-cover object-center h-full -z-10 bg-dark/20 aspect-[3/2]">
@@ -97,10 +96,7 @@ const videos = await getCollection('medias');
 							<div class="relative">
 								<Image
 								src={massage_2}
-								width={384}
-								height={128}
 								aspect-ratio="3.2"
-								format='webp'
 								alt="un pied se fait masser"
 								class="object-cover w-full h-48"
 							/>
@@ -134,10 +130,7 @@ const videos = await getCollection('medias');
 							<div class="relative">
 								<Image
 								src={sophrologie_1}
-								width={384}
-								height={128}
 								aspect-ratio="3.2"
-								format='webp'
 								alt="une femme fait de la relaxation"
 								class="object-cover w-full h-48"
 							/>
@@ -171,10 +164,7 @@ const videos = await getCollection('medias');
 							<div class="relative">
 								<Image
 								src={luxson_1}
-								width={384}
-								height={128}
 								aspect-ratio="3.2"
-								format='webp'
 								alt="un homme utilise les lunettes PSIO"
 								class="object-cover w-full h-48"
 							/>
@@ -354,12 +344,12 @@ const videos = await getCollection('medias');
 										}
 										</style>
 										<a href='https://www.youtube.com/embed/-jxEu0GicYs?si=rf0TXXf8TVGNC9wx'>
-										<img src='/images/medias/videos/tv_1.png' alt='Coffee Recipe Javascript Project'>
+										<img src='src/assets/medias/tv_1.webp' alt='Quoi de 9 - Jean-Philippe VOLNY-ANNE Sophrologue'>
 										<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
 										</a>
 										"
-										src="https://www.youtube.com/embed/GOW1oxrwUz0" 
-										title="Coffee Recipe Javascript Project"
+										src="https://www.youtube.com/embed/-jxEu0GicYs?si=rf0TXXf8TVGNC9wx" 
+										title="Quoi de 9 - Jean-Philippe VOLNY-ANNE Sophrologue"
 										frameborder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 										allowfullscreen
@@ -412,7 +402,7 @@ const videos = await getCollection('medias');
 										}
 										</style>
 										<a href='https://www.youtube.com/embed/eE69clJxUs4?si=im1g1FSNssNiR2oV'>
-										<img src='/images/medias/videos/radio_1.webp' alt='Un jour une entreprise - itinéraire d'un praticien bien-être'>
+										<img src='src/assets/medias/podcast_1.webp' alt='Un jour une entreprise - itinéraire d'un praticien bien-être'>
 										<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
 										</a>
 										"
