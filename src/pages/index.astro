@@ -11,6 +11,13 @@ import ServiceCard from '@components/ServiceCard.astro';
 import FeatureCard from '@components/FeatureCard.astro';
 import MediaCard from '@components/MediaCard.astro';
 
+//import images
+import massage_1 from "@images/home/massage_1.jpg"
+import massage_2 from "@images/home/massage_2.jpg"
+import sophrologie_1 from "@images/home/sophrologie_1.jpg"
+import luxson_1 from "@images/home/luxson_1.jpg"
+
+
 // import collections
 import { getCollection } from "astro:content";
 
@@ -29,10 +36,11 @@ const videos = await getCollection('medias');
 		<section id="home__hero" class="section relative grid items-ends overflow-hidden h-[70vh]">
 			<div class="container">
 				<Image 
-					src="/images/home/massage_1.jpg"
+					src={massage_1}
 					alt="un dos nu est massé"
 					width={2048}
 					height={1024}
+					format='webp'
 					class="absolute top-0 left-0 object-cover object-center h-full -z-20 aspect-[3/2]"
 				/>
 				<div class="overlay absolute top-0 left-0 w-full object-cover object-center h-full -z-10 bg-dark/20 aspect-[3/2]">
@@ -82,40 +90,121 @@ const videos = await getCollection('medias');
 						<h2 class="headline headline-h2">Prenez-soin de vous</h2>
 						<p class="mt-3 text-lg text-gray">Vous souhaitez renforcer votre santé physique et mentale? Notre mission est de vous accompagner dans cette démarche</p>
 					</div>
-			
+					<!-- Cards grid -->
 					<div class="grid items-start md:grid-cols-3 gap-6 lg:gap-8 lg:col-span-8 mt-10 lg:mt-0">
-						<ServiceCard
-								 image={{
-									 src:"/images/home/massage_2.jpg",
-									 alt: 'un pied se fait masser'
-								 }}
-								 title='Massage bien-être'
-								 description='Massage bien-être de détente.'
-								 href="/massage"
-								 btn='link'
-							 />
-							<ServiceCard
-								 image={{
-									 src:"/images/home/sophrologie_1.jpg",
-									 alt: 'Femme noire en mdéditation sophrologique'
-								 }}
-								 title='Sophrologie'
-								 description='Pour connecter corps et conscience.'
-								 btn='link'
-								 href="/sophrologie"
+						<article
+							class="relative flex max-w-[24rem] h- flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+							<div class="relative">
+								<Image
+								src={massage_2}
+								width={384}
+								height={128}
+								aspect-ratio="3.2"
+								format='webp'
+								alt="ui/ux review check"
+								class="object-cover w-full h-48"
 							/>
-							<ServiceCard
-								 image={{
-									 src:"/images/home/luxson_1.jpg",
-									 alt: 'Homme en pleine séance de Luxson'
-								 }}
-								 title='Luxson - Psio'
-								 description='Pour reposer ses méninges.'
-								 btn='link'
-								 href="/luxson"
+							</div>
+							<div class="p-6">
+								<h3 class="headline headline-h4">
+								Massage bien-être
+								</h3>
+								<p class="block mt-3">
+								Massage bien-être de détente, sur table.
+								</p>
+
+								<div class="flex items-center mt-6">
+									<div class="flex-shrink-0">
+										<Link
+											role='link'
+											label="En savoir plus"
+											href='/massage'
+											icon={{
+											name:'arrow-right',
+											side: 'right'
+											}}
+											classes='link'
+										/>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article
+							class="relative flex max-w-[24rem] h- flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+							<div class="relative">
+								<Image
+								src={sophrologie_1}
+								width={384}
+								height={128}
+								aspect-ratio="3.2"
+								format='webp'
+								alt="ui/ux review check"
+								class="object-cover w-full h-48"
 							/>
+							</div>
+							<div class="p-6">
+								<h3 class="headline headline-h4">
+								Sophrologie
+								</h3>
+								<p class="block mt-3">
+								Pour connecter corps et conscience.
+								</p>
+
+								<div class="flex items-center mt-6">
+									<div class="flex-shrink-0">
+										<Link
+											role='link'
+											label="En savoir plus"
+											href='/massage'
+											icon={{
+											name:'arrow-right',
+											side: 'right'
+											}}
+											classes='link'
+										/>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article
+							class="relative flex max-w-[24rem] h- flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+							<div class="relative">
+								<Image
+								src={luxson_1}
+								width={384}
+								height={128}
+								aspect-ratio="3.2"
+								format='webp'
+								alt="ui/ux review check"
+								class="object-cover w-full h-48"
+							/>
+							</div>
+							<div class="p-6">
+								<h3 class="headline headline-h4">
+								Luxson - Psio
+								</h3>
+								<p class="block mt-3">
+								Reposer ses méninges
+								</p>
+
+								<div class="flex items-center mt-6">
+									<div class="flex-shrink-0">
+										<Link
+											role='link'
+											label="En savoir plus"
+											href='/massage'
+											icon={{
+											name:'arrow-right',
+											side: 'right'
+											}}
+											classes='link'
+										/>
+									</div>
+								</div>
+							</div>
+						</article>
 					</div>
-				<!-- End Grid -->
+					<!-- End Grid -->
 				</div>
 			</div>
 		</section>

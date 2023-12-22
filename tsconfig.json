@@ -14,7 +14,9 @@
       "@styles/*": [
         "src/styles/*"
       ],
-    
+    "@images/*": [
+      "src/images/*"
+    ],
     },
   }
 }
