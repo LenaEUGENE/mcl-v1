@@ -318,47 +318,122 @@ const videos = await getCollection('medias');
 				<div class="grid-wrapper w-full grid justify-center mt-14">
 					<ul id="grid-media" class="w-full grid gap-6 lg:gap-8 mx-auto lg:grid-cols-2">
 						
-						<article class=" media-card group grid h-full w-full justify-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white text-gray">
-							<div class="flex h-full w-full items-center justify-center">
-								 <iframe
-									 width="560"
-									 height="315"
-									 src="https://www.youtube.com/embed/-jxEu0GicYs?si=rf0TXXf8TVGNC9wx"
-									 title="YouTube video player"
-									 frameborder="0"
-									 loading="lazy"
-									 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									 allowfullscreen>
-								 </iframe>
-							 </div>
-							 <div class="flex flex-col justify-between flex-1 p-6">
-								 <div class="flex-1">
-								   <h3 class="headline headline-4 mb-3">Qui es-tu Jean-Phillippe?</h3>
-								   <p class="">Entretien de Jean-Philippe, dans l'emission Quoi de 9 sur Zouk Tv.</p>
-								 </div>
-						   
-							   </div>
-						 </article>
-						 <article class=" media-card group grid h-full w-full justify-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white text-gray">
-							<div class="flex h-full w-full items-center justify-center">
-								 <iframe
-									 width="560"
-									 height="315"
-									 src="https://www.youtube.com/embed/eE69clJxUs4?si=U7VH2p-Uk3pKKK8E"
-									 title="YouTube video player"
-									 frameborder="0"
-									 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									 allowfullscreen>
-								 </iframe>
-							 </div>
-							 <div class="flex flex-col justify-between flex-1 p-6">
-								 <div class="flex-1">
-								   <h3 class="headline headline-4 mb-3">Itinéraire d'un praticien bien-être.</h3>
-								   <p class="">Entretien de Jean-Philippe, dans l'emission Un jour, une entreprise, sur Radio Caraïbes International.</p>
-								 </div>
-						   
-							   </div>
-						 </article>
+						<li>
+							<article class=" media-card group grid h-full w-full justify-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white text-gray">
+								<div class="flex h-full w-full items-center justify-center">
+									<iframe 
+			
+										loading="lazy";
+										srcdoc="<style>
+										* {
+										padding: 0;
+										margin: 0;
+										overflow: hidden;
+										}
+										
+										body, html {
+											height: 100%;
+										}
+										
+										img, svg {
+											position: absolute;
+											width: 100%;
+											top: 0;
+											bottom: 0;
+											margin: auto;
+										}
+										
+										svg {
+											filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+											transition: all 250ms ease-in-out;
+										}
+										
+										body:hover svg {
+											filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+											transform: scale(1.2);
+										}
+										</style>
+										<a href='https://www.youtube.com/embed/-jxEu0GicYs?si=rf0TXXf8TVGNC9wx'>
+										<img src='/images/medias/videos/tv_1.png' alt='Coffee Recipe Javascript Project'>
+										<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+										</a>
+										"
+										src="https://www.youtube.com/embed/GOW1oxrwUz0" 
+										title="Coffee Recipe Javascript Project"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+										allowfullscreen
+										class="w-full h-96"
+										>
+									</iframe>
+								</div>
+								<div class="flex flex-col justify-between flex-1 p-6">
+									<div class="flex-1">
+									<h3 class="headline headline-4 mb-3">Qui es-tu Jean-Phillippe?</h3>
+									<p class="">Entretien de Jean-Philippe, dans l'emission Quoi de 9 sur Zouk Tv.</p>
+									</div>
+							
+								</div>
+							</article>
+						</li>
+						<li>
+							<article class=" media-card group grid h-full w-full justify-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white text-gray">
+								<div class="flex h-full w-full items-center justify-center">
+									<iframe 
+			
+										loading="lazy";
+										srcdoc="<style>
+										* {
+										padding: 0;
+										margin: 0;
+										overflow: hidden;
+										}
+										
+										body, html {
+											height: 100%;
+										}
+										
+										img, svg {
+											position: absolute;
+											width: 100%;
+											top: 0;
+											bottom: 0;
+											margin: auto;
+										}
+										
+										svg {
+											filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+											transition: all 250ms ease-in-out;
+										}
+										
+										body:hover svg {
+											filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+											transform: scale(1.2);
+										}
+										</style>
+										<a href='https://www.youtube.com/embed/eE69clJxUs4?si=im1g1FSNssNiR2oV'>
+										<img src='/images/medias/videos/radio_1.webp' alt='Un jour une entreprise - itinéraire d'un praticien bien-être'>
+										<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+										</a>
+										"
+										src="https://www.youtube.com/embed/eE69clJxUs4?si=im1g1FSNssNiR2oV" 
+										title="Un jour une entreprise - itinéraire d'un praticien bien-être"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+										allowfullscreen
+										class="w-full h-96"
+										>
+									</iframe>
+								</div>
+								<div class="flex flex-col justify-between flex-1 p-6">
+									<div class="flex-1">
+									<h3 class="headline headline-4 mb-3">Itinéraire d'un praticien bien-être</h3>
+									<p class="">Entretien de Jean-Philippe, dans l'emission Un jour, une entreprise, sur Radio Caraïbes International.</p>
+									</div>
+							
+								</div>
+							</article>
+						</li>
 						 
 					</ul>
 				</div>
