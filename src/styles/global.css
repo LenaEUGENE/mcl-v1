@@ -169,6 +169,10 @@ select {
     @apply text-fs-medium;
   }
 
+  p {
+    @apply max-w-[85ch];
+  }
+
   .tagline{
     @apply text-fs-tiny uppercase font-medium text-dark;
   }
