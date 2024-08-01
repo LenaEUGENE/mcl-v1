@@ -32,7 +32,10 @@ const videos = await getCollection('medias')
 
 <Layout title="Mon corps libéré | Accueil">
 	<Main>
-		<section id="home__hero" class="section items-ends relative grid h-[70vh] overflow-hidden">
+		<section
+			id="home__hero"
+			class="section items-ends relative grid h-[80vh] overflow-hidden md:h-[70vh]"
+		>
 			<div class="container mx-0">
 				<Image
 					src={massage_1}
@@ -44,7 +47,7 @@ const videos = await getCollection('medias')
 					class="overlay absolute left-0 top-0 -z-10 aspect-[3/2] h-full w-full bg-dark/20 object-cover object-center"
 				>
 				</div>
-				<div class="left h-full pt-12 text-offwhite lg:w-1/2 xl:w-4/6">
+				<div class="md:left h-full pt-12 text-center text-offwhite lg:w-1/2 xl:w-4/6">
 					<h1 class="tagline text-brand">
 						Relaxation à domicile : massage, sophrologie, luminothérapie
 					</h1>
@@ -102,7 +105,10 @@ const videos = await getCollection('medias')
 					</div>
 				</div>
 				<div class="grid-wrapper mt-16 grid w-full justify-center">
-					<ul id="grid-services" class="mx-auto grid w-full gap-6 md:grid-cols-3 lg:gap-8">
+					<ul
+						id="grid-services"
+						class="mx-auto grid w-full gap-6 md:grid-cols-3 lg:gap-8"
+					>
 						<article
 							class="h- text-gray-700 relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border shadow-md"
 						>
@@ -116,7 +122,9 @@ const videos = await getCollection('medias')
 							</div>
 							<div class="p-6">
 								<h3 class="headline headline-h4">Massage bien-être</h3>
-								<p class="mt-3 block">Massage bien-être de détente, sur table et à domicile.</p>
+								<p class="mt-3 block">
+									Massage bien-être de détente, sur table et à domicile.
+								</p>
 
 								<div class="mt-6 flex items-center">
 									<div class="flex-shrink-0">
@@ -147,7 +155,9 @@ const videos = await getCollection('medias')
 							</div>
 							<div class="p-6">
 								<h3 class="headline headline-h4">Sophrologie</h3>
-								<p class="mt-3 block">Pour connecter corps et conscience seul ou en petit groupe.</p>
+								<p class="mt-3 block">
+									Pour connecter corps et conscience seul ou en petit groupe.
+								</p>
 
 								<div class="mt-6 flex items-center">
 									<div class="flex-shrink-0">
@@ -178,7 +188,9 @@ const videos = await getCollection('medias')
 							</div>
 							<div class="p-6">
 								<h3 class="headline headline-h4">Luxson - Psio</h3>
-								<p class="mt-3 block">Reposer ses méninges à l'aide du son et la lumière.</p>
+								<p class="mt-3 block">
+									Reposer ses méninges à l'aide du son et la lumière.
+								</p>
 
 								<div class="mt-6 flex items-center">
 									<div class="flex-shrink-0">
