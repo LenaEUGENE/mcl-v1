@@ -170,7 +170,7 @@ select {
   }
 
   p {
-    @apply max-w-[85ch];
+    @apply max-w-[75ch];
   }
 
   .tagline{
