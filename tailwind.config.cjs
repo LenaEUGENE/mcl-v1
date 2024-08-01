@@ -23,7 +23,7 @@ module.exports = {
 			/* body font-sizes */
 			  "fs-tiny": ["clamp(0.625rem, 0.103vw + 0.592rem, 0.75rem)", "1.4"],
 			  "fs-small":["clamp(0.75rem, 0.082vw + 0.724rem, 0.85rem)", "1.4"],
-			  "fs-base": ["clamp(1rem, 0.206vw + 0.934rem, 1.25rem)", "1.5"],
+			  "fs-base": ["clamp(1rem, 0.206vw + 0.934rem, 1.15rem)", "1.5"],
 			  "fs-medium": ["clamp(1.25rem, 0.206vw + 0.934rem, 1.375rem)", "1.5"],
 
 			  /* heading font-sizes */
