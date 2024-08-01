@@ -1,78 +1,83 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import { Icon } from 'astro-icon';
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon'
 
 //import components
-import Main from '../components/Main.astro';
-import Button from '@components/Button.astro';
-import Link from '@components/Link.astro';
-import ServiceCard from '@components/ServiceCard.astro';
-import FeatureCard from '@components/FeatureCard.astro';
-import MediaCard from '@components/MediaCard.astro';
+import Main from '../components/Main.astro'
+import Button from '@components/Button.astro'
+import Link from '@components/Link.astro'
+import ServiceCard from '@components/ServiceCard.astro'
+import FeatureCard from '@components/FeatureCard.astro'
+import MediaCard from '@components/MediaCard.astro'
 
 //import images
-import massage_1 from "@assets/home/massage_1.jpg"
-import massage_2 from "@assets/home/massage_2.jpg"
-import sophrologie_1 from "@assets/home/sophrologie_1.jpg"
-import podcast_1 from "@assets/home/podcast_1.webp"
-import luxson_1 from "@assets/home/luxson_1.jpg"
-
+import massage_1 from '@assets/home/massage_1.jpg'
+import massage_2 from '@assets/home/massage_2.jpg'
+import sophrologie_1 from '@assets/home/sophrologie_1.jpg'
+import podcast_1 from '@assets/home/podcast_1.webp'
+import luxson_1 from '@assets/home/luxson_1.jpg'
 
 // import collections
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content'
 
 //fetching collection pricing
 const pricing = await getCollection('pricing', ({ data }) => {
-  return data.category === "particulier";
-});
+	return data.category === 'particulier'
+})
 
 //fetching collection media
-const videos = await getCollection('medias');
-
+const videos = await getCollection('medias')
 ---
+
 <Layout title="Mon corps libéré | Accueil">
 	<Main>
-		
-		<section id="home__hero" class="section relative grid items-ends overflow-hidden h-[70vh]">
+		<section id="home__hero" class="section items-ends relative grid h-[70vh] overflow-hidden">
 			<div class="container mx-0">
-				<Image 
+				<Image
 					src={massage_1}
 					alt="un dos nu est massé"
 					aspect-ratio="3:2"
-					class="absolute top-0 left-0 object-cover object-center h-full -z-20 aspect-[3/2]"
+					class="absolute left-0 top-0 -z-20 aspect-[3/2] h-full object-cover object-center"
 				/>
-				<div class="overlay absolute top-0 left-0 w-full object-cover object-center h-full -z-10 bg-dark/20 aspect-[3/2]">
-
+				<div
+					class="overlay absolute left-0 top-0 -z-10 aspect-[3/2] h-full w-full bg-dark/20 object-cover object-center"
+				>
 				</div>
-				<div class="left lg:w-1/2 xl:w-4/6 h-full text-offwhite pt-12">
-					<h1 class="tagline text-brand">Relaxation à domicile : massage, sophrologie, luminothérapie</h1>
-					<h1 class="headline headline-h1 text-offwhite mb-8">Votre rendez-vous bien-être <br> en <span class="bg-dark">Martinique</span></h1>
-					<p class="text-fs-medium">MCL accompagne celles et ceux à la recherche d'une bulle de relaxation.
-						<br>Besoin de récupérer? De faire le plein d'énergie?
+				<div class="left h-full pt-12 text-offwhite lg:w-1/2 xl:w-4/6">
+					<h1 class="tagline text-brand">
+						Relaxation à domicile : massage, sophrologie, luminothérapie
+					</h1>
+					<h1 class="headline headline-h1 mb-8 text-offwhite">
+						Votre rendez-vous bien-être <br /> en <span class="bg-dark">Martinique</span
+						>
+					</h1>
+					<p class="text-fs-medium">
+						MCL accompagne celles et ceux à la recherche d'une bulle de relaxation.
+						<br />Besoin de récupérer? De faire le plein d'énergie?
 					</p>
 					<p class="text-fs-medium">Laissez le bien-être venir à vous.</p>
-				
+
 					<div class="hero-home__cta-wrapper mt-12 space-x-4">
-						<Button 
-							type='button'
-							href='tel:+596 6 96 09 08 77'
-							role='link'
-							label='Je prends rendez-vous'
+						<Button
+							type="button"
+							href="tel:+596 6 96 09 08 77"
+							role="link"
+							label="Je prends rendez-vous"
 							icon={{
-								name:"ph:phone-call",
-								side:"right"
+								name: 'ph:phone-call',
+								side: 'right'
 							}}
-							classes={"isFilled"}
+							classes={'isFilled'}
 						/>
-						<Link 
-							href='/entreprise'
+						<Link
+							href="/entreprise"
 							label="Voir l'offre entreprise"
 							icon={{
-								name:"ph:arrow-right",
-								side:"right"
+								name: 'ph:arrow-right',
+								side: 'right'
 							}}
-							classes={"isFilled dark"}
+							classes={'isFilled dark'}
 						/>
 					</div>
 				</div>
@@ -80,121 +85,118 @@ const videos = await getCollection('medias');
 		</section>
 
 		<!-- services -->
-		<section class="section">
+		<section id="tarifs-individuel" class="section pattern">
 			<div class="container">
-				<!-- Grid -->
-				<div class="grid lg:grid-cols-12 gap-6 lg:gap-8 lg:items-start">
-					<div class="lg:col-span-4">
-						<p class="tagline">Choissisez votre séance de Relaxation</p>
+				<div
+					class="sectionTitle mx-auto w-full max-w-prose space-y-4 pb-12 text-center lg:pb-16"
+				>
+					<div class="groupTitle space-y-1">
+						<span class="tagline">Choissisez votre séance de Relaxation</span>
 						<h2 class="headline headline-h2">Prenez-soin de vous</h2>
-						<p class="mt-3 text-lg text-gray">Vous souhaitez renforcer votre santé physique et mentale? Notre mission est de vous accompagner dans cette démarche</p>
 					</div>
-					<!-- Cards grid -->
-					<div class="grid items-start md:grid-cols-3 gap-6 lg:gap-8 lg:col-span-8 mt-10 lg:mt-0">
+					<div class="subheadline-wrapper w-full">
+						<p class="sub__headline text-fs-base">
+							Vous souhaitez renforcer votre santé physique et mentale? Notre mission
+							est de vous accompagner dans cette démarche
+						</p>
+					</div>
+				</div>
+				<div class="grid-wrapper mt-16 grid w-full justify-center">
+					<ul id="grid-services" class="mx-auto grid w-full gap-6 md:grid-cols-3 lg:gap-8">
 						<article
-							class="relative flex max-w-[24rem] h- flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+							class="h- text-gray-700 relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border shadow-md"
+						>
 							<div class="relative">
 								<Image
-								src={massage_2}
-								aspect-ratio="3.2"
-								alt="un pied se fait masser"
-								class="object-cover w-full h-48"
+									src={massage_2}
+									aspect-ratio="3.2"
+									alt="un pied se fait masser"
+									class="h-48 w-full object-cover"
 								/>
 							</div>
 							<div class="p-6">
-								<h3 class="headline headline-h4">
-								Massage bien-être
-								</h3>
-								<p class="block mt-3">
-								Massage bien-être de détente, sur table.
-								</p>
+								<h3 class="headline headline-h4">Massage bien-être</h3>
+								<p class="mt-3 block">Massage bien-être de détente, sur table et à domicile.</p>
 
-								<div class="flex items-center mt-6">
+								<div class="mt-6 flex items-center">
 									<div class="flex-shrink-0">
 										<Link
-											role='link'
+											role="link"
 											label="En savoir plus"
-											href='/massage'
+											href="/massage"
 											icon={{
-											name:'arrow-right',
-											side: 'right'
+												name: 'arrow-right',
+												side: 'right'
 											}}
-											classes='link'
+											classes="link"
 										/>
 									</div>
 								</div>
 							</div>
 						</article>
 						<article
-							class="relative flex max-w-[24rem] h- flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+							class="h- text-gray-700 relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border shadow-md"
+						>
 							<div class="relative">
 								<Image
-								src={sophrologie_1}
-								aspect-ratio="3.2"
-								alt="une femme fait de la relaxation"
-								class="object-cover w-full h-48"
-							/>
+									src={sophrologie_1}
+									aspect-ratio="3.2"
+									alt="une femme fait de la relaxation"
+									class="h-48 w-full object-cover"
+								/>
 							</div>
 							<div class="p-6">
-								<h3 class="headline headline-h4">
-								Sophrologie
-								</h3>
-								<p class="block mt-3">
-								Pour connecter corps et conscience.
-								</p>
+								<h3 class="headline headline-h4">Sophrologie</h3>
+								<p class="mt-3 block">Pour connecter corps et conscience seul ou en petit groupe.</p>
 
-								<div class="flex items-center mt-6">
+								<div class="mt-6 flex items-center">
 									<div class="flex-shrink-0">
 										<Link
-											role='link'
+											role="link"
 											label="En savoir plus"
-											href='/massage'
+											href="/massage"
 											icon={{
-											name:'arrow-right',
-											side: 'right'
+												name: 'arrow-right',
+												side: 'right'
 											}}
-											classes='link'
+											classes="link"
 										/>
 									</div>
 								</div>
 							</div>
 						</article>
 						<article
-							class="relative flex max-w-[24rem] h- flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+							class="h- text-gray-700 relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border shadow-md"
+						>
 							<div class="relative">
 								<Image
-								src={luxson_1}
-								aspect-ratio="3.2"
-								alt="un homme utilise les lunettes PSIO"
-								class="object-cover w-full h-48"
-							/>
+									src={luxson_1}
+									aspect-ratio="3.2"
+									alt="un homme utilise les lunettes PSIO"
+									class="h-48 w-full object-cover"
+								/>
 							</div>
 							<div class="p-6">
-								<h3 class="headline headline-h4">
-								Luxson - Psio
-								</h3>
-								<p class="block mt-3">
-								Reposer ses méninges
-								</p>
+								<h3 class="headline headline-h4">Luxson - Psio</h3>
+								<p class="mt-3 block">Reposer ses méninges à l'aide du son et la lumière.</p>
 
-								<div class="flex items-center mt-6">
+								<div class="mt-6 flex items-center">
 									<div class="flex-shrink-0">
 										<Link
-											role='link'
+											role="link"
 											label="En savoir plus"
-											href='/massage'
+											href="/massage"
 											icon={{
-											name:'arrow-right',
-											side: 'right'
+												name: 'arrow-right',
+												side: 'right'
 											}}
-											classes='link'
+											classes="link"
 										/>
 									</div>
 								</div>
 							</div>
 						</article>
-					</div>
-					<!-- End Grid -->
+					</ul>
 				</div>
 			</div>
 		</section>
@@ -202,30 +204,29 @@ const videos = await getCollection('medias');
 		<!-- Features -->
 		<div class="section bg-dark">
 			<div class="container">
-				<div class="grid lg:grid-cols-3 items-center gap-6 lg:gap-8">
+				<div class="grid items-center gap-6 lg:grid-cols-3 lg:gap-8">
 					<!-- Card -->
 					<FeatureCard
-                    icon={{
-                        name:"graduation-cap",
-                    }}
-                    title='Personnel qualifié'
-                    description="Nos praticiens ont toutes les compétences techniques, pratiques et humaines pour mener à bien les missions qui leur sont confiées"
-                />
-                <FeatureCard
-                    icon={{
-                        name:"compass",
-                    }}
-                    title='À la carte'
-                    description="Choisissez parmi nos prestations. Celles-ci peuvent être combinées afin de vous accommoder. Objectif: vous satisfaire au mieux de nos compétences."
-                />
-                <FeatureCard
-                    icon={{
-                        name:"house-line",
-                    }}
-                    title='À domicile'
-                    description="Décidez de l'heure et du lieu de votre prestation. Nous nous déplaçons dans un rayon de 25km autour de Fort-de-France, avec le matériel nécessaire."
-                />
-				
+						icon={{
+							name: 'graduation-cap'
+						}}
+						title="Personnel qualifié"
+						description="Nos praticiens ont toutes les compétences techniques, pratiques et humaines pour mener à bien les missions qui leur sont confiées"
+					/>
+					<FeatureCard
+						icon={{
+							name: 'compass'
+						}}
+						title="À la carte"
+						description="Choisissez parmi nos prestations. Celles-ci peuvent être combinées afin de vous accommoder. Objectif: vous satisfaire au mieux de nos compétences."
+					/>
+					<FeatureCard
+						icon={{
+							name: 'house-line'
+						}}
+						title="À domicile"
+						description="Décidez de l'heure et du lieu de votre prestation. Nous nous déplaçons dans un rayon de 25km autour de Fort-de-France, avec le matériel nécessaire."
+					/>
 				</div>
 			</div>
 		</div>
@@ -233,60 +234,80 @@ const videos = await getCollection('medias');
 		<!-- pricing -->
 		<section id="tarifs-individuel" class="section pattern">
 			<div class="container">
-				<div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-center pb-12 lg:pb-16">
+				<div
+					class="sectionTitle mx-auto w-full max-w-prose space-y-4 pb-12 text-center lg:pb-16"
+				>
 					<div class="groupTitle space-y-1">
 						<span class="tagline">Améliorer votre qualité de vie</span>
 						<h2 class="headline headline-h2">Nos tarifs pour particuliers</h2>
 					</div>
 					<div class="subheadline-wrapper w-full">
-						<p class="sub__headline text-fs-base">Les tarifs sont valables pour une personne</p>
+						<p class="sub__headline text-fs-base">
+							Les tarifs sont valables pour une personne
+						</p>
 					</div>
 				</div>
-				<div class="grid-wrapper w-full grid justify-center mt-16">
-					<ul id="grid-pricing" class="w-full grid gap-6 lg:gap-8 mx-auto sm:grid-cols-2 lg:grid-cols-3">
+				<div class="grid-wrapper mt-16 grid w-full justify-center">
+					<ul
+						id="grid-pricing"
+						class="mx-auto grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+					>
 						{
-							pricing.map ((pricing)  =>
-								(
-									<li>
-										<article class="flex flex-col border-2 border-brand text-center text-[1rem] p-6 rounded-2xl shadow-2xl shadow-brand/20 lg:p-8">
-											{pricing.data.popular &&(
-											<p class="mb-3"><span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md text-xs uppercase font-semibold bg-brand/20">Populaire</span></p>
-											)} 
-											<h4 class="headline headline-4">{pricing.data.title}</h4>
-											<span class="mt-5 font-bold text-fs-3xl">
-												{pricing.data.price}
-												<span class="font-bold text-2xl -mr-2">€</span>
+							pricing.map((pricing) => (
+								<li>
+									<article class="flex flex-col rounded-2xl border-2 border-brand p-6 text-center text-[1rem] shadow-2xl shadow-brand/20 lg:p-8">
+										{pricing.data.popular && (
+											<p class="mb-3">
+												<span class="text-xs inline-flex items-center gap-1.5 rounded-md bg-brand/20 px-3 py-1.5 font-semibold uppercase">
+													Populaire
+												</span>
+											</p>
+										)}
+										<h4 class="headline headline-4">{pricing.data.title}</h4>
+										<span class="mt-5 text-fs-3xl font-bold">
+											{pricing.data.price}
+											<span class="text-2xl -mr-2 font-bold">€</span>
+										</span>
+										<p class="mt-2 text-[1rem]">{pricing.data.accroche}</p>
+
+										<div class="card-pricing__details w-full rounded-sm bg-brand/20 px-1 py-1">
+											<span class="text-neutral_gray">
+												{pricing.data.description}
 											</span>
-											<p class="mt-2 text-[1rem]">{pricing.data.accroche}</p>
+										</div>
 
-											<div class="card-pricing__details w-full bg-brand/20 px-1 rounded-sm py-1">
-												<span class="text-neutral_gray">{pricing.data.description}</span>
-											</div>
-
-											<ul class="mt-6 space-y-2.5 text-sm">
-												<li class="flex space-x-2 items-start">
-													<Icon name="check-circle" class="w-4 h-4 text-brand bg-gray rounded-full flex-shrink-0" />
-													<span class="text-gray text-left leading-none">
-														{pricing.data.bienfait_1}
-													</span>
-												</li>
-												<li class="flex space-x-2 items-start">
-													<Icon name="check-circle" class="w-4 h-4 text-brand bg-gray rounded-full flex-shrink-0" />
-													<span class="text-gray text-left leading-none">
-														{pricing.data.bienfait_2}
-													</span>
-												</li>
-												<li class="flex space-x-2 items-start">
-													<Icon name="check-circle" class="w-4 h-4 text-brand bg-gray rounded-full flex-shrink-0" />
-													<span class="text-gray text-left leading-none">
-														{pricing.data.bienfait_3}
-													</span>
-												</li>
-											</ul>
-										</article>
-									</li>
-								)
-							)
+										<ul class="text-sm mt-6 space-y-2.5">
+											<li class="flex items-start space-x-2">
+												<Icon
+													name="check-circle"
+													class="h-4 w-4 flex-shrink-0 rounded-full bg-gray text-brand"
+												/>
+												<span class="text-left leading-none text-gray">
+													{pricing.data.bienfait_1}
+												</span>
+											</li>
+											<li class="flex items-start space-x-2">
+												<Icon
+													name="check-circle"
+													class="h-4 w-4 flex-shrink-0 rounded-full bg-gray text-brand"
+												/>
+												<span class="text-left leading-none text-gray">
+													{pricing.data.bienfait_2}
+												</span>
+											</li>
+											<li class="flex items-start space-x-2">
+												<Icon
+													name="check-circle"
+													class="h-4 w-4 flex-shrink-0 rounded-full bg-gray text-brand"
+												/>
+												<span class="text-left leading-none text-gray">
+													{pricing.data.bienfait_3}
+												</span>
+											</li>
+										</ul>
+									</article>
+								</li>
+							))
 						}
 					</ul>
 				</div>
@@ -296,170 +317,190 @@ const videos = await getCollection('medias');
 		<!-- Medias -->
 		<section class="section bg-gray-900">
 			<div class="container">
-				<div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-center pb-12 lg:pb-16">
+				<div
+					class="sectionTitle mx-auto w-full max-w-prose space-y-4 pb-12 text-center lg:pb-16"
+				>
 					<div class="groupTitle space-y-1">
 						<span class="tagline">Tv, radio, podcast</span>
 						<h2 class="headline headline-h2">MCL dans les médias</h2>
 					</div>
 					<div class="subheadline-wrapper w-full">
-						<p class="sub__headline text-fs-base">Jean-Phillipe, fondateur de MCL, est l'invité des médias martiniquais</p>
+						<p class="sub__headline text-fs-base">
+							Jean-Phillipe, fondateur de MCL, est l'invité des médias martiniquais
+						</p>
 					</div>
 				</div>
-				<div class="grid-wrapper w-full grid justify-center mt-14">
-					<ul id="grid-media" class="w-full grid gap-6 lg:gap-8 mx-auto lg:grid-cols-2">
-						
+				<div class="grid-wrapper mt-14 grid w-full justify-center">
+					<ul id="grid-media" class="mx-auto grid w-full gap-6 lg:grid-cols-2 lg:gap-8">
 						<li>
-							<article class=" media-card group grid h-full w-full justify-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white text-gray">
+							<article
+								class="media-card group grid h-full w-full justify-center overflow-hidden rounded-2xl bg-white text-gray shadow-2xl shadow-brand/20"
+							>
 								<div class="flex h-full w-full items-center justify-center">
-									<iframe 
-			
+									<iframe
 										loading="lazy"
-										src="https://www.youtube.com/embed/-jxEu0GicYs?si=rf0TXXf8TVGNC9wx" 
+										src="https://www.youtube.com/embed/-jxEu0GicYs?si=rf0TXXf8TVGNC9wx"
 										title="Quoi de 9 - Jean-Philippe VOLNY-ANNE Sophrologue"
 										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen
-										class="w-full h-96"
-										>
+										class="h-96 w-full"
+									>
 									</iframe>
 								</div>
-								<div class="flex flex-col justify-between flex-1 p-6">
+								<div class="flex flex-1 flex-col justify-between p-6">
 									<div class="flex-1">
-									<h3 class="headline headline-4 mb-3">Qui es-tu Jean-Phillippe?</h3>
-									<p class="">Entretien de Jean-Philippe, dans l'emission Quoi de 9 sur Zouk Tv.</p>
+										<h3 class="headline headline-4 mb-3">
+											Qui es-tu Jean-Phillippe?
+										</h3>
+										<p class="">
+											Entretien de Jean-Philippe, dans l'emission Quoi de 9
+											sur Zouk Tv.
+										</p>
 									</div>
-							
 								</div>
 							</article>
 						</li>
 						<li>
-							<article class=" media-card group grid h-full w-full justify-center rounded-2xl overflow-hidden shadow-2xl shadow-brand/20 bg-white text-gray">
+							<article
+								class="media-card group grid h-full w-full justify-center overflow-hidden rounded-2xl bg-white text-gray shadow-2xl shadow-brand/20"
+							>
 								<div class="flex h-full w-full items-center justify-center">
-									<iframe 
-			
+									<iframe
 										loading="lazy"
-										src="https://www.youtube.com/embed/eE69clJxUs4?si=im1g1FSNssNiR2oV" 
+										src="https://www.youtube.com/embed/eE69clJxUs4?si=im1g1FSNssNiR2oV"
 										title="Un jour une entreprise - itinéraire d'un praticien bien-être"
 										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen
-										class="w-full h-96"
-										>
+										class="h-96 w-full"
+									>
 									</iframe>
 								</div>
-								<div class="flex flex-col justify-between flex-1 p-6">
+								<div class="flex flex-1 flex-col justify-between p-6">
 									<div class="flex-1">
-									<h3 class="headline headline-4 mb-3">Itinéraire d'un praticien bien-être</h3>
-									<p class="">Entretien de Jean-Philippe, dans l'emission Un jour, une entreprise, sur Radio Caraïbes International.</p>
+										<h3 class="headline headline-4 mb-3">
+											Itinéraire d'un praticien bien-être
+										</h3>
+										<p class="">
+											Entretien de Jean-Philippe, dans l'emission Un jour, une
+											entreprise, sur Radio Caraïbes International.
+										</p>
 									</div>
-							
 								</div>
 							</article>
 						</li>
-						 
 					</ul>
 				</div>
-			<div>
-		</section>
+				<div></div>
 
-		<!-- CTA -->
-		<section class="section">
-			<div class="container">
-				<div
-					class="relative z-10 overflow-hidden rounded-2xl bg-brand/20 shadow-lg shadow-brand px-8 md:p-[70px]"
-				>
-					<div class="-mx-4 flex flex-wrap items-center">
-						<div class="sectionTitle w-full mx-auto max-w-prose space-y-4 text-left pb-12 lg:pb-16 lg:w-1/2">
-							<div class="groupTitle space-y-1">
-								<span class="tagline"></span>
-								<h2 class="headline headline-h2">MCL se propose de vous relaxer</h2>
+				<!-- CTA -->
+				<section class="section">
+					<div class="container">
+						<div
+							class="relative z-10 overflow-hidden rounded-2xl bg-brand/20 px-8 shadow-lg shadow-brand md:p-[70px]"
+						>
+							<div class="-mx-4 flex flex-wrap items-center">
+								<div
+									class="sectionTitle mx-auto w-full max-w-prose space-y-4 pb-12 text-left lg:w-1/2 lg:pb-16"
+								>
+									<div class="groupTitle space-y-1">
+										<span class="tagline"></span>
+										<h2 class="headline headline-h2">
+											MCL se propose de vous relaxer
+										</h2>
+									</div>
+									<div class="subheadline-wrapper w-full">
+										<p class="sub__headline text-base">
+											Pour cela, il vous suffit de nous contacter afin
+											d'obtenir réponse à vos questions et de prendre
+											rendez-vous.
+										</p>
+									</div>
+								</div>
+								<div class="w-full px-4 lg:w-1/2">
+									<div class="flex flex-wrap gap-6 lg:justify-end">
+										<Button
+											type="button"
+											role="link"
+											href="tel:+596 6 96 09 08 77"
+											label="Nous téléphoner"
+											icon={{
+												name: 'phone-call',
+												side: 'right'
+											}}
+											classes={'isFilled'}
+										/>
+									</div>
+								</div>
 							</div>
-							<div class="subheadline-wrapper w-full">
-								<p class="sub__headline text-base">Pour cela, il vous suffit de nous contacter afin d'obtenir réponse à vos questions et de prendre rendez-vous.</p>
+							<div>
+								<span class="absolute left-0 top-0 z-[-1]">
+									<svg
+										width="189"
+										height="162"
+										viewBox="0 0 189 162"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<ellipse
+											cx="16"
+											cy="-16.5"
+											rx="173"
+											ry="178.5"
+											transform="rotate(180 16 -16.5)"
+											fill="url(#paint0_linear)"></ellipse>
+										<defs>
+											<linearGradient
+												id="paint0_linear"
+												x1="-157"
+												y1="-107.754"
+												x2="98.5011"
+												y2="-106.425"
+												gradientUnits="userSpaceOnUse"
+											>
+												<stop stop-color="white" stop-opacity="0.07"></stop>
+												<stop offset="1" stop-color="white" stop-opacity="0"
+												></stop>
+											</linearGradient>
+										</defs>
+									</svg>
+								</span>
+								<span class="absolute bottom-0 right-0 z-[-1]">
+									<svg
+										width="191"
+										height="208"
+										viewBox="0 0 191 208"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<ellipse
+											cx="173"
+											cy="178.5"
+											rx="173"
+											ry="178.5"
+											fill="url(#paint0_linear)"></ellipse>
+										<defs>
+											<linearGradient
+												id="paint0_linear"
+												x1="-3.27832e-05"
+												y1="87.2457"
+												x2="255.501"
+												y2="88.5747"
+												gradientUnits="userSpaceOnUse"
+											>
+												<stop stop-color="white" stop-opacity="0.07"></stop>
+												<stop offset="1" stop-color="white" stop-opacity="0"
+												></stop>
+											</linearGradient>
+										</defs>
+									</svg>
+								</span>
 							</div>
 						</div>
-					<div class="w-full px-4 lg:w-1/2">
-						<div class="flex flex-wrap lg:justify-end gap-6">
-							<Button 
-								type='button'
-								role="link"
-								href='tel:+596 6 96 09 08 77'
-								label='Nous téléphoner'
-								icon={{
-									name:"phone-call",
-									side:"right"
-								}}
-								classes={'isFilled'}
-							/>
-						</div>
 					</div>
-					</div>
-					<div>
-					<span class="absolute top-0 left-0 z-[-1]">
-						<svg
-						width="189"
-						height="162"
-						viewBox="0 0 189 162"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						>
-						<ellipse
-							cx="16"
-							cy="-16.5"
-							rx="173"
-							ry="178.5"
-							transform="rotate(180 16 -16.5)"
-							fill="url(#paint0_linear)"
-						/>
-						<defs>
-							<linearGradient
-							id="paint0_linear"
-							x1="-157"
-							y1="-107.754"
-							x2="98.5011"
-							y2="-106.425"
-							gradientUnits="userSpaceOnUse"
-							>
-							<stop stop-color="white" stop-opacity="0.07" />
-							<stop offset="1" stop-color="white" stop-opacity="0" />
-							</linearGradient>
-						</defs>
-						</svg>
-					</span>
-					<span class="absolute bottom-0 right-0 z-[-1]">
-						<svg
-						width="191"
-						height="208"
-						viewBox="0 0 191 208"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						>
-						<ellipse
-							cx="173"
-							cy="178.5"
-							rx="173"
-							ry="178.5"
-							fill="url(#paint0_linear)"
-						/>
-						<defs>
-							<linearGradient
-							id="paint0_linear"
-							x1="-3.27832e-05"
-							y1="87.2457"
-							x2="255.501"
-							y2="88.5747"
-							gradientUnits="userSpaceOnUse"
-							>
-							<stop stop-color="white" stop-opacity="0.07" />
-							<stop offset="1" stop-color="white" stop-opacity="0" />
-							</linearGradient>
-						</defs>
-						</svg>
-					</span>
-					</div>
-				</div>
+				</section>
 			</div>
 		</section>
-
 	</Main>
 </Layout>
