@@ -27,7 +27,7 @@ module.exports = {
 			  "fs-medium": ["clamp(1.15rem, 0.206vw + 0.934rem, 1.375rem)", "1.5"],
 
 			  /* heading font-sizes */
-			  "fs-huge": ["clamp(2.25rem, 1.875vw + 1.9rem, 4.78rem)", "1.1"],
+			  "fs-huge": ["clamp(2.25rem, 1.75vw + 1.8rem, 4.78rem)", "1.1"],
 			  "fs-3xl": ["clamp(2rem, 1.493vw + 1.522rem, 3.815rem)", "1"],
 			  "fs-2xl": ["clamp(1.75rem, 0.617vw + 1.553rem, 2.5rem)", "1.1"],
 			  "fs-xl": ["clamp(1.5rem, 0.411vw + 1.368rem, 2rem)", "1.1"],

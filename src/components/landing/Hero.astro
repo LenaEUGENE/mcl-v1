@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon'
+
+//import images
+import massage_1 from '@assets/home/massage_1.jpg'
+
+//import components
+import Button from '@components/Button.astro'
+---
+
+<section id="hero" class="section mt-14 lg:max-h-[40rem] bg-brand lg:bg-offwhite lg:mt-24">
+	<div class="hero__inner-section container">
+		<div
+			class="hero__layout space-y-8 lg:grid lg:grid-cols-2 lg:gap-16 lg:px-8 2xl:grid-cols-5"
+		>
+			<div class="hero__content 2xl:col-span-2">
+				<div class="mx-auto lg:mx-0">
+					<h1 class="headline headline-h1 text-dark">
+						Votre rendez-vous bien-être en <span class="bg-dark text-brand"
+							>Martinique</span
+						>
+					</h1>
+				</div>
+				<p class="text-lg lg:text-xl text-zinc-400 font-regular">
+					MCL accompagne celles et ceux à la recherche d'une bulle de relaxation. Besoin
+					de récupérer? De faire le plein d'énergie? Laissez le bien-être venir à vous.
+				</p>
+
+				<div class="CTA mt-8 w-full">
+					<Button
+						type="button"
+						role="link"
+						href="tel:+596 6 96 09 08 77"
+						label="Prendre rendez-vous"
+						icon={{
+							name: 'phone-call',
+							side: 'right'
+						}}
+						classes={'isFilled'}
+					/>
+				</div>
+			</div>
+			<div class="hero__img 2xl:col-span-3">
+				<div class="-hero__image-wrapper overflow-clip rounded-2xl">
+					<Image
+						src={massage_1}
+						alt="Massage d'un dos nu"
+						class="aspect-[3/2] h-full w-full object-cover object-center"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

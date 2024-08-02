@@ -10,6 +10,7 @@ import Link from '@components/Link.astro'
 import ServiceCard from '@components/ServiceCard.astro'
 import FeatureCard from '@components/FeatureCard.astro'
 import MediaCard from '@components/MediaCard.astro'
+import Hero from '@components/landing/Hero.astro'
 
 //import images
 import massage_1 from '@assets/home/massage_1.jpg'
@@ -32,60 +33,8 @@ const videos = await getCollection('medias')
 
 <Layout title="Mon corps libéré | Accueil">
 	<Main>
-		<section
-			id="home__hero"
-			class="section items-ends relative grid h-[80vh] overflow-hidden md:h-[70vh]"
-		>
-			<div class="container mx-0">
-				<Image
-					src={massage_1}
-					alt="un dos nu est massé"
-					aspect-ratio="3:2"
-					class="absolute left-0 top-0 -z-20 aspect-[3/2] h-full object-cover object-center"
-				/>
-				<div
-					class="overlay absolute left-0 top-0 -z-10 aspect-[3/2] h-full w-full bg-dark/20 object-cover object-center"
-				>
-				</div>
-				<div class="md:left h-full pt-12 text-center text-offwhite lg:w-1/2 xl:w-4/6">
-					<h1 class="tagline text-brand">
-						Relaxation à domicile : massage, sophrologie, luminothérapie
-					</h1>
-					<h1 class="headline headline-h1 mb-8 text-offwhite">
-						Votre rendez-vous bien-être <br /> en <span class="bg-dark">Martinique</span
-						>
-					</h1>
-					<p class="text-fs-medium">
-						MCL accompagne celles et ceux à la recherche d'une bulle de relaxation.
-						<br />Besoin de récupérer? De faire le plein d'énergie?
-					</p>
-					<p class="text-fs-medium">Laissez le bien-être venir à vous.</p>
-
-					<div class="hero-home__cta-wrapper mt-12 space-x-4">
-						<Button
-							type="button"
-							href="tel:+596 6 96 09 08 77"
-							role="link"
-							label="Je prends rendez-vous"
-							icon={{
-								name: 'ph:phone-call',
-								side: 'right'
-							}}
-							classes={'isFilled'}
-						/>
-						<Link
-							href="/entreprise"
-							label="Voir l'offre entreprise"
-							icon={{
-								name: 'ph:arrow-right',
-								side: 'right'
-							}}
-							classes={'isFilled dark'}
-						/>
-					</div>
-				</div>
-			</div>
-		</section>
+		
+		<Hero/>
 
 		<!-- services -->
 		<section id="tarifs-individuel" class="section pattern">
@@ -410,7 +359,7 @@ const videos = await getCollection('medias')
 				<section class="section">
 					<div class="container">
 						<div
-							class="relative z-10 overflow-hidden rounded-2xl bg-brand/20 p-8   shadow-lg shadow-brand md:p-[70px]"
+							class="relative z-10 overflow-hidden rounded-2xl bg-brand/20 p-8 shadow-lg shadow-brand md:p-[70px]"
 						>
 							<div class="-mx-4 flex flex-wrap items-center">
 								<div
