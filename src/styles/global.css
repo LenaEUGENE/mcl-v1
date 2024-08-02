@@ -151,7 +151,7 @@ select {
   }
 
   .headline{
-    @apply block font-bold text-dark antialiased leading-snug tracking-tight;
+    @apply block font-semibold text-dark antialiased leading-snug tracking-tight;
   }
 
   .headline-h1{
