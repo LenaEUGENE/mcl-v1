@@ -151,7 +151,7 @@ select {
   }
 
   .headline{
-    @apply block font-semibold text-dark antialiased leading-snug tracking-normal;
+    @apply block font-bold text-dark antialiased leading-snug tracking-tight;
   }
 
   .headline-h1{
@@ -166,11 +166,11 @@ select {
   }
 
   .headline-h4{
-    @apply text-fs-medium;
+    @apply text-fs-lg;
   }
 
   p {
-    @apply text-fs-base max-w-[75ch];
+    @apply text-fs-base max-w-[85ch];
   }
 
   .tagline{

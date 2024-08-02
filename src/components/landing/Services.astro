@@ -1,0 +1,152 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon'
+
+//import images
+import massage_2 from '@assets/home/massage_2.jpg'
+import sophrologie_1 from '@assets/home/sophrologie_1.jpg'
+import luxson_1 from '@assets/home/luxson_1.jpg'
+
+//import components
+import Button from '@components/Button.astro'
+import Link from '@components/Link.astro'
+---
+
+<section id="services" class="section bg-brand/20">
+	<div class="services__inner-section container">
+		<div class="services__layout space-y-14">
+			<div class="sectionTitle mx-auto w-full max-w-prose space-y-4 text-center">
+				<div class="groupTitle space-y-1">
+					<span class="tagline">Choissisez votre séance de Relaxation</span>
+					<h2 class="headline headline-h2">Prenez-soin de vous</h2>
+				</div>
+				<div class="subheadline-wrapper w-full">
+					<p class="sub__headline text-fs-base">
+						Vous souhaitez renforcer votre santé physique et mentale? Notre mission est
+						de vous accompagner dans cette démarche
+					</p>
+				</div>
+			</div>
+			<div class="grid-wrapper grid w-full justify-center">
+				<ul id="grid-services" class="mx-auto grid w-full gap-6 md:grid-cols-3 lg:gap-8">
+					<article
+						class="max-w-sm overflow-clip rounded-2xl border border-brand bg-white shadow"
+					>
+						<Image
+							src={massage_2}
+							aspect-ratio="3.2"
+							alt="un pied se fait masser"
+							class="h-48 w-full object-cover"
+						/>
+						<div class="p-5">
+							<a href="#">
+								<h3 class="headline headline-4">Massage bien-être</h3>
+							</a>
+							<p class="mb-3 font-normal text-dark/90">
+								Massage bien-être de détente, sur table et à domicile.
+							</p>
+							<a
+								href="/massage"
+								class="text-sm inline-flex items-center rounded-lg bg-dark px-3 py-2 text-center font-medium text-white hover:bg-dark/90 focus:outline-none focus:ring-4 focus:ring-brand"
+							>
+								En savoir plus
+								<svg
+									class="ms-2 h-3.5 w-3.5 text-brand rtl:rotate-180"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 14 10"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+								</svg>
+							</a>
+						</div>
+					</article>
+
+					<article
+						class="max-w-sm overflow-clip rounded-2xl border border-brand bg-white shadow"
+					>
+						<Image
+							src={sophrologie_1}
+							aspect-ratio="3.2"
+							alt="Une femme noire médite"
+							class="h-48 w-full object-cover"
+						/>
+						<div class="p-5">
+							<a href="#">
+								<h3 class="headline headline-4">Sophrologie</h3>
+							</a>
+							<p class="mb-3 font-normal text-dark/90">
+								Pour connecter corps et conscience seul ou en petit groupe.
+							</p>
+							<a
+								href="/sophrologie"
+								class="text-sm inline-flex items-center rounded-lg bg-dark px-3 py-2 text-center font-medium text-white hover:bg-dark/90 focus:outline-none focus:ring-4 focus:ring-brand"
+							>
+								En savoir plus
+								<svg
+									class="ms-2 h-3.5 w-3.5 text-brand rtl:rotate-180"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 14 10"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+								</svg>
+							</a>
+						</div>
+					</article>
+
+					<article
+						class="max-w-sm overflow-clip rounded-2xl border border-brand bg-white shadow"
+					>
+						<Image
+							src={luxson_1}
+							aspect-ratio="3.2"
+							alt="Un homme fait une sieste avec des lunettes de luminothérapie sur les yeux"
+							class="h-48 w-full object-cover"
+						/>
+						<div class="p-5">
+							<a href="#">
+								<h3 class="headline headline-4">Luxson - Psio</h3>
+							</a>
+							<p class="mb-3 font-normal text-dark/90">
+								Reposer ses méninges à l'aide d'un jeu de son et lumière.
+							</p>
+							<a
+								href="/luxson"
+								class="text-sm inline-flex items-center rounded-lg bg-dark px-3 py-2 text-center font-medium text-white hover:bg-dark/90 focus:outline-none focus:ring-4 focus:ring-brand"
+							>
+								En savoir plus
+								<svg
+									class="ms-2 h-3.5 w-3.5 text-brand rtl:rotate-180"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 14 10"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+								</svg>
+							</a>
+						</div>
+					</article>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

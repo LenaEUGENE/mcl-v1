@@ -10,7 +10,10 @@ import Link from '@components/Link.astro'
 import ServiceCard from '@components/ServiceCard.astro'
 import FeatureCard from '@components/FeatureCard.astro'
 import MediaCard from '@components/MediaCard.astro'
+
+//import sections
 import Hero from '@components/landing/Hero.astro'
+import Services from '@components/landing/Services.astro'
 
 //import images
 import massage_1 from '@assets/home/massage_1.jpg'
@@ -37,130 +40,7 @@ const videos = await getCollection('medias')
 		<Hero/>
 
 		<!-- services -->
-		<section id="tarifs-individuel" class="section pattern">
-			<div class="container">
-				<div
-					class="sectionTitle mx-auto w-full max-w-prose space-y-4 pb-12 text-center lg:pb-16"
-				>
-					<div class="groupTitle space-y-1">
-						<span class="tagline">Choissisez votre séance de Relaxation</span>
-						<h2 class="headline headline-h2">Prenez-soin de vous</h2>
-					</div>
-					<div class="subheadline-wrapper w-full">
-						<p class="sub__headline text-fs-base">
-							Vous souhaitez renforcer votre santé physique et mentale? Notre mission
-							est de vous accompagner dans cette démarche
-						</p>
-					</div>
-				</div>
-				<div class="grid-wrapper mt-16 grid w-full justify-center">
-					<ul
-						id="grid-services"
-						class="mx-auto grid w-full gap-6 md:grid-cols-3 lg:gap-8"
-					>
-						<article
-							class="h- text-gray-700 relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border shadow-md"
-						>
-							<div class="relative">
-								<Image
-									src={massage_2}
-									aspect-ratio="3.2"
-									alt="un pied se fait masser"
-									class="h-48 w-full object-cover"
-								/>
-							</div>
-							<div class="p-6">
-								<h3 class="headline headline-h4">Massage bien-être</h3>
-								<p class="mt-3 block">
-									Massage bien-être de détente, sur table et à domicile.
-								</p>
-
-								<div class="mt-6 flex items-center">
-									<div class="flex-shrink-0">
-										<Link
-											role="link"
-											label="En savoir plus"
-											href="/massage"
-											icon={{
-												name: 'arrow-right',
-												side: 'right'
-											}}
-											classes="link"
-										/>
-									</div>
-								</div>
-							</div>
-						</article>
-						<article
-							class="h- text-gray-700 relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border shadow-md"
-						>
-							<div class="relative">
-								<Image
-									src={sophrologie_1}
-									aspect-ratio="3.2"
-									alt="une femme fait de la relaxation"
-									class="h-48 w-full object-cover"
-								/>
-							</div>
-							<div class="p-6">
-								<h3 class="headline headline-h4">Sophrologie</h3>
-								<p class="mt-3 block">
-									Pour connecter corps et conscience seul ou en petit groupe.
-								</p>
-
-								<div class="mt-6 flex items-center">
-									<div class="flex-shrink-0">
-										<Link
-											role="link"
-											label="En savoir plus"
-											href="/massage"
-											icon={{
-												name: 'arrow-right',
-												side: 'right'
-											}}
-											classes="link"
-										/>
-									</div>
-								</div>
-							</div>
-						</article>
-						<article
-							class="h- text-gray-700 relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border shadow-md"
-						>
-							<div class="relative">
-								<Image
-									src={luxson_1}
-									aspect-ratio="3.2"
-									alt="un homme utilise les lunettes PSIO"
-									class="h-48 w-full object-cover"
-								/>
-							</div>
-							<div class="p-6">
-								<h3 class="headline headline-h4">Luxson - Psio</h3>
-								<p class="mt-3 block">
-									Reposer ses méninges à l'aide du son et la lumière.
-								</p>
-
-								<div class="mt-6 flex items-center">
-									<div class="flex-shrink-0">
-										<Link
-											role="link"
-											label="En savoir plus"
-											href="/massage"
-											icon={{
-												name: 'arrow-right',
-												side: 'right'
-											}}
-											classes="link"
-										/>
-									</div>
-								</div>
-							</div>
-						</article>
-					</ul>
-				</div>
-			</div>
-		</section>
+		<Services/>
 
 		<!-- Features -->
 		<section id="Features" class="section bg-dark">
