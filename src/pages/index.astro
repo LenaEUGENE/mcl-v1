@@ -73,11 +73,9 @@ const videos = await getCollection('medias')
 		</section>
 
 		<!-- pricing -->
-		<section id="tarifs-individuel" class="section pattern">
-			<div class="container">
-				<div
-					class="sectionTitle mx-auto w-full max-w-prose space-y-4 pb-12 text-center lg:pb-16"
-				>
+		<section id="tarifs-individuel" class="section">
+			<div class="pricing__inner-section container">
+				<div class="sectionTitle mx-auto w-full max-w-prose space-y-4 text-center">
 					<div class="groupTitle space-y-1">
 						<span class="tagline">Améliorer votre qualité de vie</span>
 						<h2 class="headline headline-h2">Nos tarifs pour particuliers</h2>
@@ -96,7 +94,7 @@ const videos = await getCollection('medias')
 						{
 							pricing.map((pricing) => (
 								<li>
-									<article class="flex flex-col rounded-2xl border-2 border-brand p-6 text-center text-[1rem] shadow-2xl shadow-brand/20 lg:p-8">
+									<article class="flex flex-col rounded-2xl border-2 border-brand p-6 text-left text-[1rem] shadow shadow-brand/20 lg:p-8">
 										{pricing.data.popular && (
 											<p class="mb-3">
 												<span class="text-xs inline-flex items-center gap-1.5 rounded-md bg-brand/20 px-3 py-1.5 font-semibold uppercase">
@@ -109,10 +107,12 @@ const videos = await getCollection('medias')
 											{pricing.data.price}
 											<span class="text-2xl -mr-2 font-bold">€</span>
 										</span>
-										<p class="mt-2 text-[1rem]">{pricing.data.accroche}</p>
+										<p class="mt-2 text-[1rem] text-dark/90">
+											{pricing.data.accroche}
+										</p>
 
 										<div class="card-pricing__details w-full rounded-sm bg-brand/20 px-1 py-1">
-											<span class="text-neutral_gray">
+											<span class="text-dark/90">
 												{pricing.data.description}
 											</span>
 										</div>
@@ -121,27 +121,27 @@ const videos = await getCollection('medias')
 											<li class="flex items-start space-x-2">
 												<Icon
 													name="check-circle"
-													class="h-4 w-4 flex-shrink-0 rounded-full bg-gray text-brand"
+													class="h-4 w-4 flex-shrink-0 rounded-full bg-brand text-dark"
 												/>
-												<span class="text-left leading-none text-gray">
+												<span class="text-left leading-none text-dark/90">
 													{pricing.data.bienfait_1}
 												</span>
 											</li>
 											<li class="flex items-start space-x-2">
 												<Icon
 													name="check-circle"
-													class="h-4 w-4 flex-shrink-0 rounded-full bg-gray text-brand"
+													class="h-4 w-4 flex-shrink-0 rounded-full bg-brand text-dark"
 												/>
-												<span class="text-left leading-none text-gray">
+												<span class="text-left leading-none text-dark/90">
 													{pricing.data.bienfait_2}
 												</span>
 											</li>
 											<li class="flex items-start space-x-2">
 												<Icon
 													name="check-circle"
-													class="h-4 w-4 flex-shrink-0 rounded-full bg-gray text-brand"
+													class="h-4 w-4 flex-shrink-0 rounded-full bg-brand text-dark"
 												/>
-												<span class="text-left leading-none text-gray">
+												<span class="text-left leading-none text-dark/90">
 													{pricing.data.bienfait_3}
 												</span>
 											</li>
