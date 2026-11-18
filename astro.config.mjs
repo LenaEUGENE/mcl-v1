@@ -1,14 +1,9 @@
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 
-import vercel from "@astrojs/vercel/serverless";
-
+// Site 100% statique : toutes les pages sont générées au build,
+// plus de fonction serverless ni d'appel réseau au moment de l'affichage.
 // https://astro.build/config
 export default defineConfig({
-  image: {
-    service: squooshImageService(),
-  },
   integrations: [tailwind()],
-  output: "server",
-  adapter: vercel()
 });
