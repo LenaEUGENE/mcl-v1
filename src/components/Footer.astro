@@ -9,7 +9,7 @@ import Link from '@components/Link.astro'
 <footer class="section bg-dark pb-6 pt-4">
 	<div class="footer__inner-section container">
 		<div class="footer__layout grid w-full">
-			<div class="flex flex-col space-y-2 items-center justify-center">
+			<div class="flex flex-col items-center justify-center space-y-2">
 				<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
 					<Image
 						src="/logo-mcl-short.svg"
@@ -30,12 +30,13 @@ import Link from '@components/Link.astro'
 							classes="dark text-fs-small"
 						/>
 					</li>
-					
 				</ul>
 			</div>
 			<hr class="my-4 sm:mx-auto lg:my-8" />
 			<div class="block w-full text-center text-fs-small">
-				<span class="block">©2027 Mon Corps Libéré. Tous droits réservés.</span>
+				<span class="block"
+					>©{new Date().getFullYear()} Mon Corps Libéré. Tous droits réservés.</span
+				>
 				<span class="block">
 					Design et intégration par <Link
 						role="link"
