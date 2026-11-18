@@ -1,7 +1,7 @@
 ---
 category: particulier
 title: Corossol 
-price: 60
+price: 65
 accroche: Connectez corps et conscience
 description: sophrologie | 60mn | 1 pers
 bienfait_1: Renforce la confiance en soi

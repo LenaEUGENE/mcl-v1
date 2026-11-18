@@ -1,7 +1,7 @@
 ---
 category: particulier
 title: Quenette 
-price: 30
+price: 35
 accroche: Connectez corps et conscience
 description: sophrologie | 60mn | 3 à 8 pers
 bienfait_1: Renforce la confiance en soi

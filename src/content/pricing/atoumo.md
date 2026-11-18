@@ -1,7 +1,7 @@
 ---
 category: particulier
 title: Atoumo
-price: 70
+price: 75
 accroche: apaise et aide à lâcher prise
 description: massage sur table | 60mn | 1 pers
 bienfait_1: Relaxe ou dynamise
